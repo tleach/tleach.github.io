@@ -2,24 +2,25 @@
 layout: post
 title:  "Understanding pymongo and datetime"
 date:   2013-12-21 18:26:29
-categories: pymongo datetime python mongo encoding
+categories: python mongo
 ---
 
-The Python standard library's handling of dates and times is notoriously awful. By default, timezone's are largely ignored and doing any kind of semi-useful operation on a `datetime` object is unintuitive and time-consuming (just try converting a naive datetime to a timestamp).
+The Python standard library's handling of dates and times is notoriously awful. By default, timezones are largely ignored and doing any kind of semi-useful operation on a `datetime` object is unintuitive and time-consuming (just try converting a naive datetime to a timestamp).
 
-If you're using Mongo as your datastore, you'll probably already have some awareness that Mongo exposes BSON ISO dates as Python datetime objects. However, the rules that govern the details of how this works are somewhat non-obvious, especially when you consider naive vs timezone-aware `datetime`s.
+If you're using Mongo as your datastore, you'll probably already have some awareness that Mongo exposes BSON ISO dates as Python datetime objects. However, the details of how this works are somewhat non-obvious, especially when you consider naive vs timezone-aware `datetime`s.
 
 So I decided to dig in and document what actually happens much for my own benefit as everyone else's.
 
 # So, what happens?
 
-PyMongo uses BSON to encode / decode documents which it saves / retrieves from the underlying data store.
+Pymongo uses BSON to encode / decode documents which it saves / retrieves from the underlying data store.
 
 BSON applies the following rules when it encounters a field which is a Python date time:
 
 # Writing
 
 Internally BSON encodes a `datetime` field as a unix timestamp - i.e. milliseconds since the Epoch. In order to do this it uses the following code:
+
 {% highlight python %}
     if isinstance(value, datetime.datetime):
         if value.utcoffset() is not None:
@@ -28,12 +29,11 @@ Internally BSON encodes a `datetime` field as a unix timestamp - i.e. millisecon
                      value.microsecond / 1000)
         return BSONDAT + name + struct.pack("<q", millis)
 {% endhighlight %}
+
 So in a nutshell:
 
    * If the given `datetime` is timezone-aware, BSON will apply the UTC offset for that timezone to the `datetime` object so that when it is converted to an Epoch timestamp it is using the equivalent UTC time.
    * If the given timezone is naive, BSON basically assumes the `datetime` is in UTC and directly converts it to an Epoch timestamp.
-
-
 
 # Reading
 
@@ -59,9 +59,9 @@ So in a nutshell:
    * If `tz_aware=True` is specified (more on this below), the returned `datetime` is created as timezone-aware and is set up with UTC as the time zone.
    * If `tz_aware=False` is specified, then you returned a naive `datetime`.
 
-By default, PyMongo will pass `tz_aware=False` to BSON when asking it to decode documents, so your loaded documents will contain naive `datetime` objects. To get PyMongo to return timezone-aware `datetime` objects, you’ll need to initialize your Connection or MongoClient object with `tz_aware=True`.
+By default, pymongo will pass `tz_aware=False` to BSON when asking it to decode documents, so your loaded documents will contain naive `datetime` objects. To get PyMongo to return timezone-aware `datetime` objects, you’ll need to initialize your `Connection` or `MongoClient` object with `tz_aware=True`.
 
 # Other thoughts
 
-PyMongo/BSON’s approach to `datetime` objects as outlined above, though respecting timezone information (by applying the UTC offset), essentially discards that timezone information when saving to the database. That means that if retaining the timezone of a given `datetime` is important to you, you’ll need to store it separately and re-apply it to the `datetime` when it is loaded back out of the database (check out the excellent Arrow library to make this super simple).
+Pymongo/BSON’s approach to `datetime` objects as outlined above, though respecting timezone information (by applying the UTC offset), essentially discards that timezone information when saving to the database. That means that if retaining the timezone of a given `datetime` is important to you, you’ll need to store it separately and re-apply it to the `datetime` when it is loaded back out of the database (check out the excellent [Arrow](https://github.com/crsmithdev/arrow) library to make this super simple).
 

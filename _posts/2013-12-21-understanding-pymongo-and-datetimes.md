@@ -7,9 +7,9 @@ tags: python mongo encoding datetime pymongo
 comments: true
 ---
 
-The Python standard library's handling of dates and times is notoriously awful. By default, timezones are largely ignored and doing any kind of semi-useful operation on a `datetime` object is unintuitive and time-consuming (just try converting a naive datetime to a timestamp).
+The Python standard library's handling of dates and times is notoriously awful. By default, timezones are largely ignored and doing any kind of semi-useful operation on a `datetime` object is unintuitive and time-consuming (just try converting a naive `datetime` to a timestamp).
 
-If you're using Mongo as your datastore, you'll probably already have some awareness that Mongo exposes BSON ISO dates as Python datetime objects. However, the details of how this works are somewhat non-obvious, especially when you consider naive vs timezone-aware `datetime`s.
+If you're using Mongo as your datastore, you'll probably already have some awareness that Mongo exposes BSON ISO dates as Python `datetime` objects. However, the details of how this works are somewhat non-obvious, especially when you consider naive vs timezone-aware `datetime`s.
 
 So I decided to dig in and document what actually happens much for my own benefit as everyone else's.
 
@@ -35,13 +35,14 @@ Internally BSON encodes a `datetime` field as a unix timestamp - i.e. millisecon
 So in a nutshell:
 
    * If the given `datetime` is timezone-aware, BSON will apply the UTC offset for that timezone to the `datetime` object so that when it is converted to an Epoch timestamp it is using the equivalent UTC time.
-   * If the given timezone is naive, BSON basically assumes the `datetime` is in UTC and directly converts it to an Epoch timestamp.
+   * If the given `datetime` is naive, __BSON assumes the `datetime` is in UTC and directly converts it to an Epoch timestamp__. This means you need to be vary careful about saving naive `datetime`s which are not in UTC.
 
+<br/>
 # Reading
 
-Given that a BSON date is just an Epoch timestamp, BSON (and to some extent Mongo) then simply needs to create a `datetime` from that timestamp when it encounters such a fields in a loaded document.
+Given that a BSON date is just an Epoch timestamp, BSON (and to some extent Mongo) then simply needs to create a `datetime` from that timestamp when it encounters such a field in a loaded document.
 
-This is the code it uses to do this:
+This is the code it uses to do this (note that this only applies as of pymongo 1.7):
 
 {% highlight python %}
 def _get_date(data, position, as_class, tz_aware, uuid_subtype):
@@ -61,9 +62,15 @@ So in a nutshell:
    * If `tz_aware=True` is specified (more on this below), the returned `datetime` is created as timezone-aware and is set up with UTC as the time zone.
    * If `tz_aware=False` is specified, then you returned a naive `datetime`.
 
-By default, pymongo will pass `tz_aware=False` to BSON when asking it to decode documents, so your loaded documents will contain naive `datetime` objects. To get PyMongo to return timezone-aware `datetime` objects, you’ll need to initialize your `Connection` or `MongoClient` object with `tz_aware=True`.
+By default, pymongo will pass `tz_aware=False` to BSON when asking it to decode documents, so __your loaded documents will contain naive `datetime` objects__. To get PyMongo to return timezone-aware `datetime` objects, you’ll need to initialize your `Connection` or `MongoClient` object with `tz_aware=True`.
 
 # Other thoughts
 
 Pymongo/BSON’s approach to `datetime` objects as outlined above, though respecting timezone information (by applying the UTC offset), essentially discards that timezone information when saving to the database. That means that if retaining the timezone of a given `datetime` is important to you, you’ll need to store it separately and re-apply it to the `datetime` when it is loaded back out of the database (check out the excellent [Arrow](https://github.com/crsmithdev/arrow) library to make this super simple).
 
+# References
+
+* [Pymongo 1.7 FAQ - What is the correct way to handle timezones with pymongo](http://api.mongodb.org/python/1.7/faq.html#what-is-the-correct-way-to-handle-time-zones-with-pymongo)
+
+
+<br />

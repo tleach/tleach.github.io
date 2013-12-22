@@ -6,6 +6,7 @@ tags: git heroku heroku mercurial hg vcs
 status: publish
 type: post
 published: true
+comments: true
 ---
 
 When I first decided I wanted to use a DVCS to manage the source code of my various projects, I was initially sold on using Mercurial by <a title="HG Init" href="http://hginit.com/">Joel Spolsky's excellent HG Init tutorial</a> (which is a great intro DVCSs in general by the way - highly recommended).

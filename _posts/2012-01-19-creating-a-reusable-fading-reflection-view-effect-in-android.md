@@ -6,6 +6,7 @@ tags: android java layout ui views
 status: publish
 type: post
 published: true
+comments: true
 ---
 
 Recently I needed to create various Android UIs which provides a "fading reflection" effect for certain screen elements. I happened upon <a title="Android, Reflections with Bitmaps" href="http://www.inter-fuser.com/2009/12/android-reflections-with-bitmaps.html" target="_blank">Neil Davies excellent post</a> on creating reflections of images in an Activity in order to re-create something similar to Apple's coverflow effect, and it set me thinking about what could be achieved using this technique.

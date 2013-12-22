@@ -4,6 +4,7 @@ title:  "Understanding pymongo and datetime"
 date:   2013-12-21 18:26:29
 categories: python
 tags: python mongo encoding datetime pymongo
+comments: true
 ---
 
 The Python standard library's handling of dates and times is notoriously awful. By default, timezones are largely ignored and doing any kind of semi-useful operation on a `datetime` object is unintuitive and time-consuming (just try converting a naive datetime to a timestamp).

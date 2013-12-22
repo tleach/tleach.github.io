@@ -23,14 +23,14 @@ BSON applies the following rules when it encounters a field which is a Python da
 
 Internally BSON encodes a `datetime` field as a unix timestamp - i.e. milliseconds since the Epoch. In order to do this it uses the following code:
 
-{% highlight python %}
-    if isinstance(value, datetime.datetime):
-        if value.utcoffset() is not None:
-            value = value - value.utcoffset()
-        millis = int(calendar.timegm(value.timetuple()) * 1000 +
-                     value.microsecond / 1000)
-        return BSONDAT + name + struct.pack("<q", millis)
-{% endhighlight %}
+```python
+if isinstance(value, datetime.datetime):
+    if value.utcoffset() is not None:
+        value = value - value.utcoffset()
+    millis = int(calendar.timegm(value.timetuple()) * 1000 +
+                 value.microsecond / 1000)
+    return BSONDAT + name + struct.pack("<q", millis)
+```
 
 So in a nutshell:
 
@@ -44,7 +44,7 @@ Given that a BSON date is just an Epoch timestamp, BSON (and to some extent Mong
 
 This is the code it uses to do this (note that this only applies as of pymongo 1.7):
 
-{% highlight python %}
+```python
 def _get_date(data, position, as_class, tz_aware, uuid_subtype):
     millis = struct.unpack("<q", data[position:position + 8])[0]
     diff = millis % 1000
@@ -55,7 +55,7 @@ def _get_date(data, position, as_class, tz_aware, uuid_subtype):
     else:
         dt = EPOCH_NAIVE + datetime.timedelta(seconds=seconds)
     return dt.replace(microsecond=diff * 1000), position
-{% endhighlight %}
+```
 
 So in a nutshell:
 
@@ -70,7 +70,7 @@ Pymongo/BSON’s approach to `datetime` objects as outlined above, though respec
 
 # References
 
-* [Pymongo 1.7 FAQ - What is the correct way to handle timezones with pymongo](http://api.mongodb.org/python/1.7/faq.html#what-is-the-correct-way-to-handle-time-zones-with-pymongo)
+* [Pymongo 1.7 FAQ - What is the correct way to handle timezones with PyMongo?](http://api.mongodb.org/python/1.7/faq.html#what-is-the-correct-way-to-handle-time-zones-with-pymongo)
 
 
 <br />

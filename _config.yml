@@ -1,3 +1,5 @@
 name: Tom Leach
 markdown: redcarpet
 pygments: true
+redcarpet:
+    extensions: [tables, no_intra_emphasis]

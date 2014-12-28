@@ -1,5 +1,5 @@
 name: Tom Leach
 markdown: redcarpet
-pygments: true
+highlighter: true
 redcarpet:
     extensions: [tables, no_intra_emphasis]

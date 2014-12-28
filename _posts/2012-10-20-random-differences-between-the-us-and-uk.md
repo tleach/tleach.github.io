@@ -5,32 +5,14 @@ categories: []
 tags: []
 status: draft
 type: post
-published: false
+published: true
 meta: {}
 ---
-<table>
-    <thead>
-        <tr>
-            <td>Difference</td>
-            <td>US</td>
-            <td>UK</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Drinking advice</td>
-            <td>"Beer then liquor, never been sicker. Liquor then beer, you're in the clear."</td>
-            <td>"Beer then wine, you'll be fine. Wine then beer, oh dear."</td>
-        </tr>
-        <tr>
-            <td>Missing cartoon characters</td>
-            <td>Where's Waldo</td>
-            <td>Where's Wally</td>
-        </tr>
-        <tr>
-            <td>Expressions of indifference</td>
-            <td>"I could care less"</td>
-            <td>"I couldn't care less"</td>
-        </tr>
-    </tbody>
-</table>
+
+| Topic | US | UK |
+|:------|:---|:---|
+| Drinking advice | "Beer then liquor, never been sicker. Liquor then beer, you're in the clear." | "Beer then wine, you'll be fine. Wine then beer, oh dear." |
+| Missing cartoon characters | Where's Waldo | Where's Wally |
+| Expressions of indifference | "I could care less" | "I couldn't care less" |
+| Maintaining control of a situation | Hold down the fort | Hold the fort |
+

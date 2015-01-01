@@ -7,7 +7,7 @@ type: post
 published: true
 comments: true
 ---
-It's rare to see a broadcaster try something truly innovative in sports coverage, but this morning as I dragged myself out of bed I was intrigued by a new format NBCSN were trying out for covering the English Premier League.
+It's rare to see a broadcaster try something truly innovative in sports coverage, but this morning as I dragged myself out of bed I was intrigued by a new format NBCSN was trying out for covering the English Premier League.
 
 It's common for there to be multiple Premier League games going on at the same time. Today 9 games simultaneously kicked off at 3.00pm UK time (10.00am EST). Normally, NBCSN (or Fox Soccer before them) would have picked one of those games to broadcast in full. The criteria for deciding which of those 9 games to broadcast is probably based on which game is likely to draw the biggest audience but also, as football is still an up-and-coming sport in the USA, on which game is likely to be the most entertaining to watch.
 

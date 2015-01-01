@@ -1,6 +1,6 @@
 ---
-layout: default
-title: In praise of NBCSN's "Breakaway Live" experiment
+layout: post
+title: In praise of NBC's "Breakaway Live" experiment
 categories: football
 tags: football nbc
 type: post

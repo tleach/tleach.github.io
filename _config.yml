@@ -1,5 +1,17 @@
-name: Tom Leach
-markdown: redcarpet
-highlighter: true
-redcarpet:
-    extensions: [tables, no_intra_emphasis]
+# Site settings
+title: Tom Leach
+email: tom@leach.it
+url: "http://leach.it"
+twitter_username: tomtheguvnor
+github_username:  tleach
+
+# Build settings
+markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: coderay
+    coderay_line_numbers: nil
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]

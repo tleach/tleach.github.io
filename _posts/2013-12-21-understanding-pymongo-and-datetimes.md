@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Understanding pymongo and datetime"
+subtitle: "Date and time handling in Python is a minefield at the best of times. Dealing with MongoDB makes it worse."
 date:   2013-12-21 18:26:29
 categories: python
 tags: python mongo encoding datetime pymongo
+header-img: "img/numerals.jpg"
 comments: true
 ---
 
@@ -37,7 +39,6 @@ So in a nutshell:
    * If the given `datetime` is timezone-aware, BSON will apply the UTC offset for that timezone to the `datetime` object so that when it is converted to an Epoch timestamp it is using the equivalent UTC time.
    * If the given `datetime` is naive, __BSON assumes the `datetime` is in UTC and directly converts it to an Epoch timestamp__. This means you need to be vary careful about saving naive `datetime`s which are not in UTC.
 
-<br/>
 # Reading
 
 Given that a BSON date is just an Epoch timestamp, BSON (and to some extent Mongo) then simply needs to create a `datetime` from that timestamp when it encounters such a field in a loaded document.

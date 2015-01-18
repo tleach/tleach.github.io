@@ -1,11 +1,13 @@
 ---
 layout: post
 title: In praise of NBC's "Breakaway Live" experiment
+subtitle: The format broadcasters use to show football matches is undergoing some interesting innovation in the USA
 categories: football
 tags: football nbc
 type: post
 published: true
 comments: true
+header-img: "img/football.jpg"
 ---
 It's rare to see a broadcaster try something truly innovative in sports coverage, but this morning as I dragged myself out of bed I was intrigued by a new format NBCSN was trying out for covering the English Premier League.
 

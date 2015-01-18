@@ -1,11 +1,13 @@
 ---
 layout: post
 title: Creating a reusable "fading reflection" view effect in Android
+subtitle: Give your UIs a little pizzazz!
 categories: android
 tags: android java layout ui views
 status: publish
 type: post
 published: true
+header-img: "img/lake-reflections.jpg"
 comments: true
 ---
 
@@ -48,8 +50,7 @@ As well as working through the approach here, I've made the source of Reflectin
 
 This is the declaration of ReflectingLayout:
 
-{% highlight java %}
-
+```java
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -224,11 +225,11 @@ public class ReflectingLayout extends LinearLayout {
       getTotalChildHeight() * MAX_REFLECTION_RATIO);
   }
 
-{% endhighlight %}
+```
 
 So what's going on here? First let's take a look at the init() method, used by both constructors to initialise the ReflectingLayout:
 
-{% highlight java %}
+```java
   /**
    * Initialises the layout.
    */
@@ -248,11 +249,11 @@ So what's going on here? First let's take a look at the init() method, used by b
     vFlipMatrix = new Matrix();
     vFlipMatrix.preScale(1, -1);
   }
-{% endhighlight %}
+```
 
 The first three set...() calls ensure that the `ReflectingLayout` pays attention to its children and makes use of the drawing cache to ensure we only do a full redraw when necessary. We also create `Paint` and `Matrix` objects for use later on in `onDraw()`. This one-off instantiation is a good idea to ensure we don't waste memory and do more garbage collection than necessary later on by repeatedly creating these objects in `onDraw()` which will be called a lot. The Paint is configured with the Porter-Duff transfer mode, this is what allows us to use a simple color gradient to vertically fade out images. The `vFlipMatrix` is simply configured to flip an image vertically to make it appear upside down. The `onDraw()` method is what the Android framework will call on a given View object when it want that View (and it's children) to draw itself onto the given canvas. `onDraw()` methods tend to get called a lot in quick succession as a UI updates, so must be fast. Here's `ReflectingLayout`'s implementation:
 
-{% highlight java %}
+```java
 protected void onDraw(Canvas canvas) {
   super.onDraw(canvas);
   // Only actually do anything if there is space to actually draw a reflection
@@ -298,7 +299,7 @@ protected void onDraw(Canvas canvas) {
       // Draw our image onto the canvas
       canvas.drawBitmap(fadedBitmap, 0, childBottom, null);
     }
-{% endhighlight %}
+```
 
 Hopefully the code comments are fairly self explanatory, but the general approach is as follows:
 

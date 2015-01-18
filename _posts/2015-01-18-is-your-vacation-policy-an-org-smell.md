@@ -42,7 +42,7 @@ What interests me more though, is what a vacation policy tells you about how a c
 
 In software engineering, the concept of ["code smell"](http://martinfowler.com/bliki/CodeSmell.html) is widely used to describe a visible symptom of a deeper underlying flaw in the structure or design of a larger body of code.
 
-Probably the simplest example is the "duplicate code" smell where multiple copies of the same code exist in a larger body of code. This smell is easy to spot and can be symptom of poor design, lack of structual discipline, fuzzy ownership boundaries and other systemic problems all of which may be having other more significant detrimental effects.
+Probably the simplest example is the "duplicate code" smell where multiple copies of the same code exist in a larger body of code. This smell is easy to spot and can be a symptom of poor design, lack of structual discipline, fuzzy ownership boundaries and other systemic problems all of which may be having other more significant detrimental effects.
 
 The complexity of even a modest-sized program can increase quickly as the interactions between the multitude of objects in the program multiply. Code smells are useful because they act as a shorthand for discovering common flaws in a complex codebase without requiring the engineer to perform deep analysis of a complex system from scratch.
 

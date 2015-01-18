@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Is your company's vacation policy an "org smell"?
+title: Is your vacation policy an "org smell"?
 subtitle: A company's attitude towards employee vacation may tell you more than you realise about how they approach employee engagement.
 categories: people
 tags: management engagement taylorism vacation development

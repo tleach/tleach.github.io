@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Is your company's vacation policy an org smell?
+title: Is your company's vacation policy an "org smell"?
 subtitle: A company's attitude towards employee vacation may tell you more than you realise about how they approach employee engagement.
 categories: people
 tags: management engagement taylorism vacation development
@@ -26,7 +26,7 @@ The debate over vacation allowance in the US is peppered with predictable critic
  - Compared to 50 years ago when it was far more common to consider basing one's career around one company, the modern labour force is far more mobile and median tenures are much shorter. This somewhat diminishes the ability of employees to earn additional paid leave as their careers advance.
  - It breeds a culture where your value as an employee is measured by the number of hours you put in, not by what you actually produce.
 
- <blockquote>That guy Tom starts sending emails at 5am and doesn't stop until midnight - guy is a machine!</blockquote>
+ <blockquote>"That guy Tom starts sending emails at 5am and doesn't stop until midnight - guy is a machine!"</blockquote>
 
  - 40 percent of Americans don't even use the meagre allowance they are actually afforded because this "need to always appear busy" is so pervasive.
  - Working more and doing other things less has adverse effects on happiness, personal relationships, marriages, child development, etc.
@@ -71,9 +71,9 @@ Perhaps the best exploration of this idea I've seen is [Dave Zwieback's presenta
   - "your capacity to innovate and add value is simply a function of the hours you work"
   - "to appeal to your fundamentally lazy nature, we'll incentivize you with the prospect of another day or two of time off if you demonstrate loyalty over several years"
 
-It suggests that the company has no real idea of what it truly means to develop their staff. If you've ever truly worked with engaged people you'll know that the problem is not getting them to do work, it's getting them to take a break! Staff who are that engaged add value to your business in a far more profound way than those who are not. It's a force multiplier.
+It suggests that the company has no real idea of what it truly means to develop their staff. If you've ever worked with truly engaged people you'll know that the problem is not getting them to do work, it's getting them to take a break! Staff who are that engaged add value to your business in a far more profound way than those who are not. It's a force multiplier.
 
-Now some employers out there may claim "we do engage our staff - we have annual reviews, send people on training courses, mentor programs...". These are all things which may help the engagement of an employee, but they are not guaranteed to do so. If you're biasing for outcomes then it's likely some of your staff happen to be engaged but many are not.
+Now some employers out there may claim "we do engage our staff - we have annual reviews, send people on training courses, mentor programs...". These are all things which may help the engagement of an employee, but they are not guaranteed to do so. If you're biasing those activities towards achieving specific outcomes, in which the employee may not actually be that engaged, then it's likely that some of your staff may happen to be engaged but many are not.
 
 __Employers - ask yourselves this: If your staff are all truly engaged in their jobs, then why do you need a restrictive holiday policy?__
 
@@ -84,7 +84,9 @@ There are two basic possible answers:
 
 If your answer looks like 1 then great.
 
-If your answer is more like 2 then you still have work to do. Dave Zwiebeck's presentation is a great starting point for understanding how to truly engage your staff, including being OK with losing those who aren't aligned with any of your company's goals. But until you feel comfortable with removing your vacation restrictions, I put it to you that a good proporation of your staff are disengaged and you are missing a huge opportunity to increase their productivity and, ultimately, the value being added to your company.
+If your answer is more like 2 then you still have work to do. Dave Zwiebeck's presentation is a great starting point for understanding how to truly engage your staff, including being OK with losing those who aren't aligned with any of your company's goals.
+
+But until you feel comfortable with removing your vacation restrictions, I put it to you that a good proporation of your staff are disengaged and you are missing a huge opportunity to increase their productivity and, ultimately, the value being added to your company.
 
 
 At [GameChanger](https://gc.com/about), our vacation policy was probably best articulated by our VP of Engineering, Phil Sarin recently:

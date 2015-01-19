@@ -4,6 +4,7 @@ email: tom@leach.it
 url: "http://leach.it"
 twitter_username: tomtheguvnor
 github_username:  tleach
+default_author: Tom Leach
 
 # Build settings
 markdown: kramdown

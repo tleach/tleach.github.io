@@ -16,9 +16,7 @@ Whereas in most European countries it's typical for there to be a statutory mini
 
 ![OECD](/img/oecd-vacation-graph.png)
 
-[In practice](http://www.bls.gov/news.release/ebs.t05.htm) it's not quite that bad. The "conventional" US vacation package you'll be offered when joining a new company is 10 days of paid leave per year. If you stay with that employer for any length of time you'll typically earn an additional day or two of vacation allowance with each passing year, with most employees allowance reaching a whopping 16 days of vacation allowance after a decade of service.
-
-(Note: I'm just talking about "white collar"/"professional"-type jobs here. If you're a member of America's working class you can subtract 3 days from those numbers.)
+[In practice](http://www.bls.gov/news.release/ebs.t05.htm) it's not quite that bad. The "conventional" US vacation package you'll be offered when joining a new company in a "white collar" position is 10 days of paid leave per year. If you stay with that employer for any length of time you'll typically earn an additional day or two of vacation allowance with each passing year, with most employees allowance reaching a whopping 16 days of vacation allowance after a decade of service.
 
 The debate over vacation allowance in the US is peppered with predictable criticisms:
 
@@ -55,7 +53,7 @@ As with code, the complexity of a company increases quickly as it grows and the 
 
 There is an encouraging trend emerging amongst those driving thought leadership in the management of engineering organisations: instead of trying to drive our employees towards a specific _outcomes_ (be they accomplishing specific tasks, personal growth goals, or career paths) we're far better off trying to drive them towards _engagement_ in something that interests them. If we do that then the accomplishment of tasks and personal growth will follow and benefit the organisation in a far more profound way.
 
-Perhaps the best exploration of this idea I've seen is [Dave Zwieback's presentation on running a self-organising team](http://www.ustream.tv/recorded/54703596). I encourage you to watch him speak on this  topic as he is far more eloquent and knowledgeable than I, but in a nutshell:
+Perhaps the best exploration of this idea I've seen is [Dave Zwieback's presentation on running a self-organising team](http://www.ustream.tv/recorded/54703596). I encourage you to watch him speak on this  topic as he is far more eloquent and knowledgeable than me, but in a nutshell:
 
  - engaged people tend to work longer, harder, better than unengaged people
  - engaged people take ownership of problems rather than the simple execution of tasks
@@ -86,7 +84,7 @@ If your answer looks like 1 then great.
 
 If your answer is more like 2 then you still have work to do. Dave Zwiebeck's presentation is a great starting point for understanding how to truly engage your staff, including being OK with losing those who aren't aligned with any of your company's goals.
 
-But until you feel comfortable with removing your vacation restrictions, I put it to you that a good proporation of your staff are disengaged and you are missing a huge opportunity to increase their productivity and, ultimately, the value being added to your company.
+But until you feel comfortable with removing your vacation restrictions, I put it to you that a good proportion of your staff are disengaged and you are missing a huge opportunity to increase their productivity and, ultimately, the value being added to your company.
 
 
 At [GameChanger](https://gc.com/about), our vacation policy was probably best articulated by our VP of Engineering, Phil Sarin recently:

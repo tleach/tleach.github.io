@@ -19,29 +19,29 @@ Like many startups, GameChanger's API stack started out life as a small, synchro
 
 This presents a number of challenges:
 
-### Lack of ownership boundaries
+### 1. Lack of ownership boundaries
 As our engineering organisation has scaled, we've necessarily structured our teams around specific areas of the business. Having a number of teams jointly own a single component like out API is problematic as the ownership boundaries are fuzzy and no one team truly owns it, which means no one owns it.
 
 When your business relies on the SLA of a component like this being maintained, the propensity for things to fall through the cracks of unowned components like this is high.
 
 Another way to look at this is that it's a violation of [Conway's Law](http://en.wikipedia.org/wiki/Conway%27s_law).
 
-### Technical debt which needs to be tackled
+### 2. Technical debt which needs to be tackled
 Like most fast growing technology companies, much of our API was created in an era when fast prototyping to obtain product-market fit was prioritized ahead of technical quality. As a result there are some areas of our API which are a little quirky, do things in a non-standard way, or just straight up have some design flaws.
 
 Another term for this is _technical debt_. We all have it, so let's be grown-ups and admit to it. These design flaws are something we would dearly like to refactor out wherever possible.
 
-### APIs live forever
+### 3. APIs live forever
 If you maintain an API whose consumers are not under your direct control, then you essentially have to regard every endpoint you publish as immortal.
 
 At GameChanger we typically release new version of our iOS app every 3-4 weeks, but we have no control over how long it takes our users to upgrade to that version. If an albeit small population of our users are still using a version of our iOS app from a year ago which happens to call an API endpoint we'd dearly love to change, we're duty bound to maintain that endpoint nonetheless.
 
 The best you can really do is just create a version 2 of the same endpoint which is used by all new versions of the client going forward and then eventually pull the plug on version 1 when the population of users has reached an acceptable level to "end of life" that iOS app version.
 
-### Tests and builds take longer to run
+### 4. Tests and builds take longer to run
 As a once-small component like our API grows larger and larger, the time it takes to run test suites and builds grows with it. This is a tax on developer time and ultimately profitability. The same small code change which used to take me a small amount of time to get merged and released now takes 2-4 times as long as the suite of  tests I must run in unrelated product areas mounts up.
 
-### Product areas with different SLAs become indirectly coupled
+### 5. Product areas with different SLAs become indirectly coupled
 Perhaps the least obvious side effects of a monolithic API like this are indirect coupling effects. I'm not talking about coupling in the traditional programming/OO sense where various modules are more tightly interdependent than they should be (though that is also something worth factoring out). I'm talking about coupling effects which derive from the fact who independent product areas with different operational characteristics and SLAs are simply running together inside the same _process_.
 
 For example, one part of our API deals with user sign-in. It is extremely important for our business that this feature is fast, responsive and available because if it isn't the user immediately notices. Sign-in is a relatively low throughput activity so maintaining a high level of availability should not be too tricky.
@@ -53,7 +53,7 @@ So the problem here is that maintaining these very different SLAs for different 
 Different product areas with different SLAs need to be scaled independently.
 
 
-### Synchronous code is a painful and inefficient to scale
+### 6. Synchronous code is a painful and inefficient to scale
 Our API, being over 5 years old, runs on top of Django which is a blocking Python framework. Unlike hot new hipster languages like Go and node.js which use goroutines and callback models respectively to maximise utilization, we spend most of our time in Django just sitting waiting for IO to complete on a fixed number of threads.
 
 Finding the ideal number of threads to run on a given server is tricky as at any given point in time you might be serving a bunch of requests which require a lot of IO but hardly any CPU (in which case you want a lot of threads to maximise your utilization) or bunch of requests which require minimal IO but do a lot processing (in which case you want a smaller number of threads to minimise context switching).
@@ -67,6 +67,7 @@ The problem with blocking code is that knowing when to scale up is not obvious a
 
 ## Enter the orchestration layer
 
+![Before](/img/network1.png)
 
 Jez Humble
 

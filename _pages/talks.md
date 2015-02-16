@@ -10,7 +10,7 @@ On this page I post details of talks I've given to the software engineering comm
 
 # Scaling Engineering with Docker
 
-[Travis Thieman]([http://twitter.com/thieman]) and I delivered a talk to the [CTO School meetup](http://www.meetup.com/ctoschool) in NYC covering our experience migrating [GameChanger](http://gc.com)'s build and deploy pipelines from being heavily based on [Chef](https://www.chef.io/) to one based around [Docker](https://www.docker.com).
+[Travis Thieman](http://twitter.com/thieman) and I delivered a talk to the [CTO School meetup](http://www.meetup.com/ctoschool) in NYC covering our experience migrating [GameChanger](http://gc.com)'s build and deploy pipelines from being heavily based on [Chef](https://www.chef.io/) to one based around [Docker](https://www.docker.com).
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/44505333" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 

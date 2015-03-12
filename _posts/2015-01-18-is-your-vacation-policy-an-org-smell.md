@@ -5,7 +5,10 @@ subtitle: A company's attitude towards employee vacation may tell you more than 
 categories: people
 tags: management engagement taylorism vacation development
 type: post
-header-img: "img/deserted-beach.jpg"
+header-img:
+    src: "img/deserted-beach.jpg"
+    credit: Thomas Galvez
+    credit-link: https://flic.kr/p/f3MwQm
 comments: true
 ---
 

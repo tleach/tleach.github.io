@@ -6,7 +6,8 @@ tags: git heroku heroku mercurial hg vcs
 status: publish
 type: post
 published: true
-header-img: "img/two-buildings.jpg"
+header-img:
+    src: "img/two-buildings.jpg"
 comments: true
 ---
 

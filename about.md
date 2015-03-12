@@ -1,7 +1,8 @@
 ---
 layout: page
 title: "About"
-header-img: "img/mash.jpg"
+header-img:
+    src: "img/mash.jpg"
 ---
 
 I'm a Software Engineer with over a decade of experience building software systems for customers around the world. I like to work on challenging problems which involve technology, people and delivering real customer value.

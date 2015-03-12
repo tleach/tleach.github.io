@@ -5,7 +5,8 @@ subtitle: "Date and time handling in Python is a minefield at the best of times.
 date:   2013-12-21 18:26:29
 categories: python
 tags: python mongo encoding datetime pymongo
-header-img: "img/numerals.jpg"
+header-img:
+  src: "img/numerals.jpg"
 comments: true
 ---
 

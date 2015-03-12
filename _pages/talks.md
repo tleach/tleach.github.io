@@ -1,6 +1,9 @@
 ---
 layout: page
-header-img: "img/microphone.jpg"
+header-img:
+    src: "img/microphone.jpg"
+    credit: Bill Selak
+    credit-link: https://flic.kr/p/6WUjm5
 title: Talks
 ---
 

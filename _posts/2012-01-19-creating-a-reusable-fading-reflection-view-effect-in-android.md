@@ -7,7 +7,10 @@ tags: android java layout ui views
 status: publish
 type: post
 published: true
-header-img: "img/lake-reflections.jpg"
+header-img:
+  src: "img/lake-reflections.jpg"
+  credit: Matthew Paulson
+  credit-link: https://flic.kr/p/cV51rQ
 comments: true
 ---
 

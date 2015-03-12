@@ -5,7 +5,7 @@ subtitle: The indirection of an orchestration layer can buy you wiggle room you 
 categories: architecture
 tags: architecture orchestration service-oriented soa microservices monolithic
 type: post
-header-img: "img/orchestra.jpg"
+header-img:
 comments: true
 ---
 

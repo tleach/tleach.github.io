@@ -1,17 +1,22 @@
 ---
 layout: post
-title: Scaling engineering with Docker
-subtitle: Docker has been praised for how it simplifies deployment. What's less obvious is how it can allow a fast growing engineering organisation to scale.
+title: Scaling Engineering with Docker
+subtitle: Docker has been praised for how it simplifies deployment. What's less obvious is how it can allow an engineering organisation to scale.
 categories: architecture
 tags: architecture engineering management
 type: post
-header-img: "img/orchestra.jpg"
+header-img:
+    src: img/scaling-engineering-with-docker/banner.jpg
+    credit: Corey Seeman
+    credit-link: https://flic.kr/p/hV31UF
 comments: true
 ---
 
-Recently, Travis Thieman and I gave a talk to the CTO School meetup group in NYC about our experiences moving GameChanger's mainly Chef-based build and deploy pipeline to one based heavily around Docker.
+_Originally [posted on the GameChanger Tech Blog](http://tech.gc.com/scaling-engineering-with-docker)._
 
-In this post, I want to dig a little deeper into one of topics we covered: how Docker has enabled us to position our engineering team to scale out in a manner which would have been inconceivable with a more traditional CM tool like Chef, Puppet or Ansible.
+Recently, Travis Thieman and I [gave a talk to the CTO School meetup group in NYC about our experiences moving GameChanger's mainly Chef-based build and deploy pipeline to one based heavily around Docker](http://leach.it/_pages/talks/#scaling-engineering-with-docker).
+
+In this post, I want to dig a little deeper into one of the topics we covered: how Docker has enabled us to position our engineering team to scale out in a manner which would have been inconceivable with a more traditional CM tool like Chef, Puppet or Ansible.
 
 # From seed to monolith
 GameChanger's backend started out as 100% Python - a Django app with some rudimentary features running on AWS. At this sort of scale, build and deploy typically looks pretty simple - some form of manually-run hand-rolled script which pulls master and restarts some services. There's really no need for anything more complicated than that when you're iterating quickly on new features.
@@ -92,6 +97,7 @@ Docker allows each development team to implement services using whatever languag
 ![Docker deploy](/img/scaling-engineering-with-docker/with-docker.png)
 
 Luckily, creating a Dockerfile to build an image for a simple service is a relatively painless activity, especially when compared with performing the same task in Chef. Here's what the Dockerfile for one of our node.js services looks like:
+
 
 ```
 FROM docker.gamechanger.io/nodejs0.10

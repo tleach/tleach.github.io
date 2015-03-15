@@ -157,8 +157,8 @@ hr.small {
 // Header
 
 .intro-header {
-	background-color: @gray; 
-	background: no-repeat center center; 
+	background-color: @gray;
+	background: no-repeat center center;
 	background-attachment: scroll;
 	.background-cover;
 	// NOTE: Background images are set within the HTML using inline CSS!
@@ -225,6 +225,26 @@ hr.small {
 				font-size: 30px;
 			}
 		}
+	}
+	.image-credit {
+		position: relative;
+		span {
+			.sans-serif;
+			position: absolute;
+			text-align: right;
+			bottom: 0;
+			right: 0;
+			color: white;
+			margin: 0 auto;
+			padding: 20px;
+			font-size: 14px;
+			a {
+				color: white;
+			}
+		}
+	}
+	.veil {
+		background: rgba(0,0,0,0.4);
 	}
 }
 

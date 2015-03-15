@@ -7,7 +7,10 @@ tags: football nbc
 type: post
 published: true
 comments: true
-header-img: "img/football.jpg"
+header-img:
+    src: img/football.jpg
+    credit: Gai Jorayev
+    credit-link: https://flic.kr/p/7qPYZE
 ---
 It's rare to see a broadcaster try something truly innovative in sports coverage, but this morning as I dragged myself out of bed I was intrigued by a new format NBCSN was trying out for covering the English Premier League.
 

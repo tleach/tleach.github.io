@@ -30,7 +30,7 @@ No. Why not? Because in this context the thing I care about most is preserving t
 
 ### In work relationships the relationship itself is secondary
 
-It's natural for people to bring this diplomatic mindset to the relationships they establish with colleagues at work. A lot of the time healthy work relationships resemble pure social relationships (shared interests, humour, enjoyment of each other's personalities) which makes it all the more natural to treat them the same way.
+It's natural for people to bring this diplomatic mindset to the relationships they establish with colleagues at work, whether they be peer relationships or manager-worker relationships. A lot of the time healthy work relationships resemble pure social relationships (shared interests, humour, enjoyment of each other's personalities) which makes it all the more natural to treat them the same way.
 
 This is a mistake. In work relationships the primary goal is improving the performance of the individual and the organisation. Though maintaining a friendly relationship is obviously desirable, it takes a back seat to what you're trying to achieve collectively.
 
@@ -40,7 +40,7 @@ By tiptoeing around and making excuses for areas where someone isn't meeting exp
 
 ### Direct, honest feedback makes for stronger relationships
 
-Though it may feel awkward and strained initially, delivering that critical feedback to a colleague can and should actually _strengthen_ your relationship with that person in the long term. This may seem counterintuitive, but if it provides the person with an opportunity to improve they will ultimately thank and respect you for it.
+Though it may feel awkward and strained initially, delivering that critical feedback to a colleague can and should actually _strengthen_ your relationship with that person in the long term. This may seem counterintuitive, but in many cases your colleagues are desperate to do a good job and are quietly crying out for feedback. Even if they aren't, providing the person with an opportunity to improve will ultimately be something for which they thank and respect you.
 
 Obviously the way in which that feedback is delivered is still important. Critical feedback delivered badly can be almost as counterproductive as no feedback at all.
 

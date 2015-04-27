@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Your work friends aren't the same as your personal friends
-subtitle: Managing work friendships the same way you do personal friendships is common and preventable misstep
+subtitle: Managing work friendships the same way you do personal friendships is a common and preventable misstep
 categories: management
 tags: management feedback relationships
 header-img:

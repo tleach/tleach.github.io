@@ -8,6 +8,7 @@ header-img:
     src: img/two-ants.jpg
     credit: Pietro Bellini
     credit-link: https://flic.kr/p/4Yq7LS
+comments: true
 ---
 
 Recently, I screwed up the management of an underperforming junior engineer on my team. Despite all of my desire to do the best possible job I could to motivate him and help develop him as an engineer, it ended with his somewhat slow and tortured exit from the company. I've post-mortemed this episode both in my head and with colleagues for the last week and come to a few realisations.
